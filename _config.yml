@@ -1,10 +1,10 @@
 # Configurations
-title:            SoorWhy's Blog
-longtitle:        SoorWhy's Blog
-author:           SoorWhy
-email:            tjdals4031@gmail.com
+title:            Seongmin's Blog
+longtitle:        Seongmin's Blog
+author:           Seongmin
+email:            tjdals4031@naver.com
 description: >
-  SoorWhy's Blog
+  Seongmin's Developer Blog
 
 version:          1.0
 gitbook_version:  3.2.3
@@ -15,6 +15,8 @@ rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
 remote_theme: sighingnow/jekyll-gitbook
+
+page_width: 800px
 
 toc:
   enabled: true
@@ -61,8 +63,6 @@ ordered_collections:
   - posts
   - pages
   - others
-
-page_width: 800px
 
 destination:      ./_site
 incremental:      false

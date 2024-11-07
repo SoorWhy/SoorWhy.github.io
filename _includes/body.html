@@ -22,7 +22,22 @@
 
                     {%- if jekyll.environment != 'dev' and site.disqushandler -%}
                         {%- include disqus.html -%}
-                    {%- endif -%}
+                    {%- endif %}
+
+                    <!-- Post Cards Section: Only show on home layout -->
+                    {% if page.layout == "home" %}
+                        <div class="post-grid">
+                            {% for post in site.posts %}
+                                <div class="post-card">
+                                    <a href="{{ post.url | prepend: site.baseurl }}">
+                                        <h2>{{ post.title }}</h2>
+                                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                                        <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                 </section>
             </div>
 
